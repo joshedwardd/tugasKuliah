@@ -2,18 +2,18 @@
 #include <stdlib.h>
 
 typedef struct {
-    int a; // Position of the apple (box)
-    int b; // Position of the key
-    int visited_k; // Flag for whether the key has been visited
-    int visited_a; // Flag for whether the apple (box) has been visited
+    int a; 
+    int b; 
+    int visited_k; 
+    int visited_a; 
 } Box;
 
-// Function to calculate absolute distance
+
 long long abs_distance(int x, int y) {
     return x > y ? x - y : y - x;
 }
 
-// Function to find the nearest unvisited key or apple
+
 int find_nearest(Box *boxes, int n, int pos, int is_key) {
     long long min_dist = 1e18;
     int idx = -1;
